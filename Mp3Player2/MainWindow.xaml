@@ -10,7 +10,6 @@
     Title="Mp3 Player"
     Width="800"
     Height="500"
-    
     Background="#FFFFCF89"
     ResizeMode="NoResize"
     mc:Ignorable="d">
@@ -20,7 +19,7 @@
             <ColumnDefinition Width="429*" />
             <ColumnDefinition Width="134*" />
             <ColumnDefinition Width="133*" />
-            <ColumnDefinition Width="132*" />
+
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="266*" />
@@ -59,7 +58,7 @@
                 </Viewbox>
             </StackPanel>
         </Button>
-        
+
         <Button
             Name="pauseBtn"
             Grid.Row="2"
@@ -134,16 +133,14 @@
                 x:Name="volumeSlider"
                 Height="153"
                 Margin="54,5"
-                HorizontalAlignment="Center"                
+                HorizontalAlignment="Center"
                 Foreground="#FF9B7949"
                 IsMoveToPointEnabled="True"
-                
                 IsSnapToTickEnabled="True"
                 Maximum="1"
                 Orientation="Vertical"
-                
-                Ticks="0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1"
                 TickPlacement="BottomRight"
+                Ticks="0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1"
                 ValueChanged="volumeSlider_ValueChanged"
                 Value="{Binding Volume, ElementName=mywindow}" />
             <TextBlock
@@ -164,7 +161,7 @@
             FontSize="30"
             Text="{Binding MusicName, ElementName=mywindow}"
             TextWrapping="Wrap" />
-        <Slider                      
+        <Slider
             x:Name="musicPosition"
             Grid.Row="1"
             Grid.ColumnSpan="4"
@@ -185,7 +182,6 @@
             VerticalAlignment="Bottom"
             Text="00:00:00" />
         <TextBlock
-            
             x:Name="textposition"
             Grid.Row="1"
             Grid.Column="0"
@@ -196,16 +192,15 @@
             VerticalAlignment="Bottom"
             Text="00:00:00" />
         <CheckBox
-            
             Grid.Row="2"
             Grid.Column="2"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            FontSize="15"
-            FontFamily="Doppio One"
-            
             Checked="CheckBox_Checked"
-            Unchecked="CheckBox_Unchecked"
-            >Repeat</CheckBox>
+            FontFamily="Doppio One"
+            FontSize="15"
+            Unchecked="CheckBox_Unchecked">
+            Repeat
+        </CheckBox>
     </Grid>
 </Window>
