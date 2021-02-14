@@ -164,7 +164,9 @@
             FontSize="30"
             Text="{Binding MusicName, ElementName=mywindow}"
             TextWrapping="Wrap" />
-        <Slider                      
+        <Slider
+            Thumb.DragCompleted="musicPosition_DragCompleted"
+            
             x:Name="musicPosition"
             Grid.Row="1"
             Grid.ColumnSpan="4"

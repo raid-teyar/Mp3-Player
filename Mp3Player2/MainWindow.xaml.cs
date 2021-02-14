@@ -22,7 +22,7 @@ namespace Mp3Player
     public partial class MainWindow : Window
     {
         public static bool finnished = false;
-        
+
 
 
         static public double volume = 0.5;
@@ -32,8 +32,8 @@ namespace Mp3Player
         static MediaPlayer mediaPlayer = new MediaPlayer();
 
 
-        
 
+       
 
 
         public MainWindow()
@@ -51,9 +51,9 @@ namespace Mp3Player
             mediaPlayer.Volume = volume;
 
             
-           
 
 
+          
 
         }
 
@@ -62,7 +62,7 @@ namespace Mp3Player
         {
             if (e.LeftButton == MouseButtonState.Pressed && e.MouseDevice.Captured == null)
 
-            {
+            {     
                 MouseButtonEventArgs args = new MouseButtonEventArgs(e.MouseDevice, e.Timestamp, MouseButton.Left);
 
                 args.RoutedEvent = MouseLeftButtonDownEvent;
@@ -192,15 +192,15 @@ namespace Mp3Player
 
 
 
-        
+
 
         private void volumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             mediaPlayer.Volume = volumeSlider.Value;
-            
+
         }
 
-        
+
 
         private void musicPosition_DragCompleted(object sender, System.Windows.Controls.Primitives.DragCompletedEventArgs e)
         {
